@@ -1,0 +1,80 @@
+:root {
+    --primary: #2ecc71;
+    --dark: #2c3e50;
+    --light: #f4f7f6;
+}
+
+body { font-family: sans-serif; background: var(--dark); margin: 0; padding: 10px; }
+
+.app-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 90vh;
+}
+
+header { background: var(--primary); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+.btn-reset { background: rgba(0,0,0,0.2); border: none; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+
+
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.setup-card { background: white; padding: 25px; border-radius: 15px; width: 85%; max-width: 350px; }
+.name-input { width: 100%; padding: 10px; margin-bottom: 8px; box-sizing: border-box; }
+.btn-text { background: none; border: none; color: var(--primary); font-weight: bold; cursor: pointer; margin-bottom: 15px; }
+
+
+.totals-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-bottom: 2px solid #eee;
+}
+.dash-box { text-align: center; font-size: 0.8rem; border-right: 1px solid #ddd; }
+.dash-box:last-child { border: none; }
+.dash-box h3 { margin: 5px 0; color: var(--primary); }
+
+
+.input-section { padding: 15px; border-bottom: 1px solid #eee; }
+.row { display: flex; gap: 10px; margin-bottom: 10px; }
+.row input { flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.check-item {
+    background: #eee;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.check-item input { margin-right: 10px; }
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item-row { padding: 12px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+.item-subtext { display: block; font-size: 0.75rem; color: #666; margin-top: 4px; }
+
+
+@media print {
+    body { background: white; color: black; }
+    .overlay, .input-section, .btn-reset, #printReceiptBtn { display: none !important; }
+    .app-container { max-width: 100%; width: 100%; border-radius: 0; box-shadow: none; }
+}
