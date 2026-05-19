@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FareShare Pro | Group Splitter</title>
+    <link rel="stylesheet" href="rico.css">
+</head>
+<body>
+    
+    <div id="setupScreen" class="overlay">
+        <div class="setup-card">
+            <h2>Who's Splitting?</h2>
+            <div id="nameInputs">
+                <input type="text" class="name-input" placeholder="Name (e.g. Alex)">
+                <input type="text" class="name-input" placeholder="Name (e.g. Sam)">
+            </div>
+            <button id="addNameField" class="btn-text">+ Add Person</button>
+            <button id="startBtn" class="btn-primary">Start Splitting</button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <h1>🛒 FareShare Pro</h1>
+            <button id="resetBtn" class="btn-reset">Reset All</button>
+        </header>
+
+        
+        <section class="totals-dashboard" id="dashBoard"></section>
+
+        
+        <section class="input-section">
+            <div class="row">
+                <input type="text" id="itemName" placeholder="Item Name">
+                <input type="number" id="itemPrice" placeholder="$0.00" step="0.01">
+            </div>
+            
+            <p class="label">Who is splitting this?</p>
+            <div id="participantCheckboxes" class="checkbox-grid"></div>
+            
+            <button id="addItem" class="btn-primary">Add to Receipt</button>
+        </section>
+
+    
+        <section class="receipt-section">
+            <ul id="itemList" class="item-list"></ul>
+           
+            <div style="padding: 15px;">
+                <button id="printReceiptBtn" class="btn-primary" style="background-color: #2ecc71;">🖨️ Print & Save Receipt</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
